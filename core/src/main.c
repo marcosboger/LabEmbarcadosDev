@@ -20,10 +20,12 @@
 #include "mgos_gpio.h"
 #include "mgos_dht.h"
 #include "mgos_blynk.h"
+#include "mgos_wifi.h"
+#include "esp_sleep.h"
 
-#define BLYNK_TEMPLATE_ID "TMPLzAyfvlt1"
-#define BLYNK_DEVICE_NAME "ESP32"
-#define BLYNK_AUTH_TOKEN "UOalnPKb1iKe9zpO9woiRu45f2crO1AE";
+#define BLYNK_AUTH_TOKEN "nma24wK-jF4Q-FIF5E0hqGh3SzhM2oUN";
+#define NETWORK_NAME "Luke s House";
+#define NETWORK_PASSWORD "123abc456";
 
 //int pinAdc = 34;
 int pinGpio = 13;
@@ -35,6 +37,10 @@ int s_read_humidity_virtual_pin = 0;
 int s_read_temperature_virtual_pin = 1;
 int s_write_water_virtual_pin = 2;
 int watering;
+struct mgos_config_wifi_sta cfg;
+//int wakeup_time_sec = 10; 
+
+
 
 static void timer_cb(void *dht) {
   //int voltage = mgos_adc_read_voltage(pinAdc);
@@ -69,13 +75,21 @@ void default_blynk_handler(struct mg_connection *c, const char *cmd,
 }
 
 enum mgos_app_init_result mgos_app_init(void) {
+  const char *blynkAuth = BLYNK_AUTH_TOKEN;
+  mgos_sys_config_set_blynk_auth(blynkAuth);
+  cfg.enable = 1;
+  cfg.ssid = NETWORK_NAME;
+  cfg.pass = NETWORK_PASSWORD;
+  bool wifi = mgos_wifi_setup_sta(&cfg);
   blynk_set_handler(default_blynk_handler, NULL);
   //bool adc = mgos_adc_enable(pinAdc);
   bool gpio = mgos_gpio_setup_output(pinGpio, 1);
   bool water = mgos_gpio_setup_output(pinWater, 0);
   watering = 0;
   struct mgos_dht *dht = mgos_dht_create(pinDht, DHT11);
-  if(gpio && water)
+  //esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
+  //esp_deep_sleep_start();
+  if(gpio && water && wifi)
     mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
   else 
     LOG(LL_INFO,
