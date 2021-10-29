@@ -27,31 +27,44 @@
 
 //int pinAdc = 34;
 int pinGpio = 13;
+int pinWater = 14;
 int pinDht = 26;
 float humidity = 0;
 float temperature = 0;
 int s_read_humidity_virtual_pin = 0;
 int s_read_temperature_virtual_pin = 1;
+int s_write_water_virtual_pin = 2;
+int watering;
 
 static void timer_cb(void *dht) {
   //int voltage = mgos_adc_read_voltage(pinAdc);
   //LOG(LL_INFO, ("Sensor voltage read: %d", voltage));
-  humidity = mgos_dht_get_humidity(dht);
-  temperature = mgos_dht_get_temp(dht);
-  LOG(LL_INFO, ("Temperature: %lf", temperature));
-  LOG(LL_INFO, ("Humidity: %lf", humidity)); 
+  if(!watering){
+    humidity = mgos_dht_get_humidity(dht);
+    temperature = mgos_dht_get_temp(dht);
+    LOG(LL_INFO, ("Temperature: %lf", temperature));
+    LOG(LL_INFO, ("Humidity: %lf", humidity));
+  } 
 }
 
 void default_blynk_handler(struct mg_connection *c, const char *cmd,
                                   int pin, int val, int id, void *user_data) {
   if (strcmp(cmd, "vr") == 0) {
     if (pin == s_read_humidity_virtual_pin) {
-      blynk_virtual_write(c, s_read_humidity_virtual_pin, humidity, id);
+      if(!watering)
+        blynk_virtual_write(c, s_read_humidity_virtual_pin, humidity, id);
     }
     if (pin == s_read_temperature_virtual_pin) {
-      blynk_virtual_write(c, s_read_temperature_virtual_pin, temperature, id);
+      if(!watering)
+        blynk_virtual_write(c, s_read_temperature_virtual_pin, temperature, id);
     }
   } 
+  if (strcmp(cmd, "vw") == 0) {
+    if (pin == s_write_water_virtual_pin) {
+      mgos_gpio_toggle(pinWater);
+      watering = !watering;
+    }
+  }
   (void) user_data;
 }
 
@@ -59,8 +72,10 @@ enum mgos_app_init_result mgos_app_init(void) {
   blynk_set_handler(default_blynk_handler, NULL);
   //bool adc = mgos_adc_enable(pinAdc);
   bool gpio = mgos_gpio_setup_output(pinGpio, 1);
+  bool water = mgos_gpio_setup_output(pinWater, 0);
+  watering = 0;
   struct mgos_dht *dht = mgos_dht_create(pinDht, DHT11);
-  if(gpio)
+  if(gpio && water)
     mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
   else 
     LOG(LL_INFO,

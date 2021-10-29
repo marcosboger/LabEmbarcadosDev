@@ -9,166 +9,161 @@ platforms:
 author: mongoose-os
 description: A Mongoose OS app skeleton
 sources:
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/src/main.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/adc/src/esp32/esp32_adc.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/src/mgos_freertos.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/src/mgos_freertos_core_dump.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/mgos_mbedtls.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/esp32/esp32_aes.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/esp32/esp32_bignum.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aes.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aes_atca.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aesni.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/arc4.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aria.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/asn1parse.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/asn1write.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/base64.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/bignum.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/blowfish.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/camellia.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ccm.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/certs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/chacha20.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/chachapoly.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cipher.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cipher_wrap.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cmac.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ctr_drbg.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/debug.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/des.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/dhm.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecdh.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecdsa.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecjpake.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp_atca.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp_curves.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/entropy.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/entropy_poll.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/error.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/gcm.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/havege.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/hkdf.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/hmac_drbg.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md2.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md4.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md5.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md_wrap.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/memory_buffer_alloc.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/net_sockets.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/nist_kw.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/oid.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/padlock.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pem.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pk.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pk_wrap.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs11.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs12.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs5.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkparse.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkwrite.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/platform.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/platform_util.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/poly1305.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ripemd160.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/rsa.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/rsa_internal.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha1.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha256.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha512.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cache.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_ciphersuites.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cli.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cookie.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_srv.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_ticket.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_tls.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/threading.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/timing.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/version.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/version_features.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_create.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_crl.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_crt.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_csr.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509write_crt.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509write_csr.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/xtea.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs_dev.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs_internal.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_fs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_fs_crypt.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_vfs_dev_partition.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/src/mgos_vfs_lfs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs/lfs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs/lfs_util.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs1/lfs1.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs1/lfs1_util.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_check.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/core/src/mgos_core.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/blynk/src/mgos_blynk.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/dht/src/mgos_dht.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc_channel.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc_channel_http.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mgos_rpc.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-config/src/mgos_service_config.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-fs/src/mgos_service_fs.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-uart/src/mgos_rpc_channel_uart.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/lwip/src/mgos_lwip.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mgos_wifi.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mgos_wifi_sta.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mjs_wifi.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/esp32/esp32_wifi.c
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/build/gen/mgos_deps_init.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/src/main.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/build/gen/mgos_deps_init.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/adc/src/esp32/esp32_adc.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/src/mgos_freertos.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/src/mgos_freertos_core_dump.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/mgos_mbedtls.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/esp32/esp32_aes.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/esp32/esp32_bignum.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aes.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aes_atca.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aesni.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/arc4.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aria.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/asn1parse.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/asn1write.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/base64.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/bignum.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/blowfish.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/camellia.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ccm.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/certs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/chacha20.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/chachapoly.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cipher.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cipher_wrap.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cmac.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ctr_drbg.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/debug.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/des.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/dhm.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecdh.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecdsa.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecjpake.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp_atca.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp_curves.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/entropy.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/entropy_poll.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/error.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/gcm.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/havege.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/hkdf.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/hmac_drbg.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md2.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md4.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md5.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md_wrap.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/memory_buffer_alloc.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/net_sockets.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/nist_kw.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/oid.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/padlock.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pem.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pk.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pk_wrap.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs11.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs12.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs5.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkparse.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkwrite.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/platform.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/platform_util.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/poly1305.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ripemd160.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/rsa.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/rsa_internal.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha1.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha256.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha512.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cache.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_ciphersuites.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cli.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cookie.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_srv.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_ticket.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_tls.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/threading.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/timing.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/version.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/version_features.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_create.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_crl.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_crt.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_csr.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509write_crt.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509write_csr.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/xtea.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs_dev.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs_internal.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_fs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_fs_crypt.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_vfs_dev_partition.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/src/mgos_vfs_lfs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs/lfs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs/lfs_util.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs1/lfs1.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs1/lfs1_util.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_check.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/core/src/mgos_core.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/blynk/src/mgos_blynk.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/dht/src/mgos_dht.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc_channel.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc_channel_http.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mgos_rpc.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-config/src/mgos_service_config.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-fs/src/mgos_service_fs.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-uart/src/mgos_rpc_channel_uart.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/mgos_wifi.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/mjs_wifi.c
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/esp32/esp32_wifi.c
 includes:
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/adc/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/adc/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mongoose/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs1
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/include/spiffs
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/core/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/core/include/esp32
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/blynk/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/dht/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-config/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-uart/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/lwip/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/include
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/adc/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/adc/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mongoose/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs1
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/include/spiffs
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/core/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/core/include/esp32
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/blynk/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/dht/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-config/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-uart/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/include
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/include/esp32
 filesystem:
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/ca-bundle/fs/ca.pem
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/fs/index.html
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/ca-bundle/fs/ca.pem
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/fs/index.html
 binary_libs:
-- /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/build/objs/libmongoose-esp32-latest.a
+- /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/build/objs/libmongoose-esp32-2.19.1.a
 modules:
-- name: mbedtls_module
+- origin: https://github.com/mongoose-os/mbedtls
   location: https://github.com/mongoose-os/mbedtls
-  version: 2.16.11-cesanta1
-- name: mongoose-os
-  location: https://github.com/cesanta/mongoose-os
-  version: latest
+  version: 2.16.6-cesanta1
+  name: mbedtls_module
 config_schema:
 - - sys.esp32_adc_vref
   - i
@@ -290,22 +285,14 @@ config_schema:
   - i
   - 25
   - title: Max Queue Length
-- - rpc.max_non_persistent_channels
-  - i
-  - 20
-  - title: Maximum number of simultaneous non-persistent channels
 - - rpc.default_out_channel_idle_close_timeout
   - i
   - 10
   - title: Default idle close timeout for outbound channels
-- - rpc.acl
-  - s
-  - ""
-  - title: RPC ACL spec - JSON or @file
 - - rpc.acl_file
   - s
   - ""
-  - title: File with RPC ACL JSON; deprecated, used if rpc.acl is not set
+  - title: File with RPC ACL JSON
 - - rpc.auth_domain
   - s
   - RPC
@@ -314,10 +301,6 @@ config_schema:
   - s
   - ""
   - title: File with user credentials in the htdigest format
-- - rpc.auth_algo
-  - i
-  - 0
-  - title: 'Password file hashing algorithm: 0 - MD5, 1 - SHA256'
 - - rpc.uart
   - o
   - title: RPC-over-UART settings
@@ -414,9 +397,6 @@ config_schema:
   - s
   - title: Password
     type: password
-- - wifi.sta.bssid
-  - s
-  - title: Specific AP to connect to
 - - wifi.sta.user
   - s
   - title: Username for WPA-PEAP mode
@@ -457,22 +437,14 @@ config_schema:
   - title: WiFi Station Config 2
 - - wifi.sta2.enable
   - false
-- - wifi.sta_rssi_thr
-  - i
-  - -95
-  - title: Do not consider APs with weaker signal
-- - wifi.sta_connect_timeout
-  - i
-  - 15
-  - title: Timeout for connection, seconds
-- - wifi.sta_roam_rssi_thr
-  - i
-  - -80
-  - title: If connected to AP with weaker signal, try to find a better one.
-- - wifi.sta_roam_interval
+- - wifi.sta_cfg_idx
   - i
   - 0
-  - title: Scan for better APs at this interval. Set to positive number ot enable.
+  - title: WiFi station config index to use, 0, 1 or 2
+- - wifi.sta_connect_timeout
+  - i
+  - 30
+  - title: Timeout for connection, seconds
 - - wifi.ap.keep_enabled
   - b
   - true
@@ -490,6 +462,10 @@ config_schema:
   - i
   - 0
   - title: 'Power save mode for station: 0 - none, 1 - min, 2 - max.'
+- - wifi.sta_all_chan_scan
+  - b
+  - true
+  - title: true to scan all channels or false to perform fast scan
 - - wifi.sta.protocol
   - s
   - BGN
@@ -569,14 +545,12 @@ build_vars:
      CONFIG_FREERTOS_SUPPORT_STATIC_ALLOCATION=y
      CONFIG_WIFI_ENABLED=y CONFIG_ESP32_WIFI_SW_COEXIST_ENABLE=n CONFIG_ESP32_WIFI_STATIC_RX_BUFFER_NUM=4 CONFIG_ESP32_WIFI_DYNAMIC_RX_BUFFER_NUM=16 CONFIG_ESP32_WIFI_STATIC_TX_BUFFER=n CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER=y CONFIG_ESP32_WIFI_TX_BUFFER_TYPE=1 CONFIG_ESP32_WIFI_DYNAMIC_TX_BUFFER_NUM=16 CONFIG_ESP32_WIFI_NVS_ENABLED=y CONFIG_ESP32_WIFI_RX_BA_WIN=4 CONFIG_ESP32_PHY_CALIBRATION_AND_DATA_STORAGE=y CONFIG_ESP32_PHY_INIT_DATA_IN_PARTITION=n
   MGOS: "1"
-  MGOS_ESP8266_LWIP: 1_SDK
   MGOS_HAVE_ADC: "1"
   MGOS_HAVE_BLYNK: "1"
   MGOS_HAVE_CA_BUNDLE: "1"
   MGOS_HAVE_CORE: "1"
   MGOS_HAVE_DHT: "1"
   MGOS_HAVE_FREERTOS: "1"
-  MGOS_HAVE_LWIP: "1"
   MGOS_HAVE_MBEDTLS: "1"
   MGOS_HAVE_MONGOOSE: "1"
   MGOS_HAVE_RPC_COMMON: "1"
@@ -589,12 +563,10 @@ build_vars:
   MGOS_HAVE_WIFI: "1"
   MGOS_HAVE_ZZ_BOARDS: "1"
   MGOS_MBEDTLS_ENABLE_ATCA: "0"
-  MGOS_MG_NET_IF: MG_NET_IF_LWIP_LOW_LEVEL
   MGOS_ROOT_FS_OPTS_LFS: '{"bs":4096,"is":128}'
   MGOS_ROOT_FS_OPTS_SPIFFS: '{"bs":4096,"ps":256,"es":4096}'
   MGOS_WIFI_ENABLE_AP_STA: "0"
 cdefs:
-  JSON_MAX_PATH_LEN: "128"
   LFS_NO_DEBUG: "1"
   MBEDTLS_FREE_CERT_CHAIN: "1"
   MBEDTLS_USER_CONFIG_FILE: \"mbedtls_platform_config.h\"
@@ -608,20 +580,15 @@ cdefs:
   MG_ENABLE_SNTP: "1"
   MG_ENABLE_SSL: "1"
   MG_ENABLE_TUN: "0"
-  MG_EXT_MD5: "1"
-  MG_EXT_SHA1: "1"
-  MG_EXT_SHA256: "1"
   MG_LOG_DNS_FAILURES: "1"
-  MG_LWIP: "1"
   MG_MAX_DNS_ANSWERS: "16"
   MG_MAX_DNS_QUESTIONS: "16"
   MG_MAX_HTTP_REQUEST_SIZE: "3072"
-  MG_MAX_HTTP_SEND_MBUF: "1460"
+  MG_MAX_HTTP_SEND_MBUF: "256"
   MG_MAX_PATH: "256"
   MG_SSL_IF: MG_SSL_IF_MBEDTLS
   MG_SSL_IF_MBEDTLS_FREE_CERTS: "1"
   MGOS: "1"
-  MGOS_DEFAULT_NAMESERVER: \"8.8.8.8\"
   MGOS_ENABLE_RPC_CHANNEL_HTTP: "1"
   MGOS_ENABLE_SYS_SERVICE: "1"
   MGOS_ESP8266_WIFI_ENABLE_WPAENT: "0"
@@ -631,7 +598,6 @@ cdefs:
   MGOS_HAVE_CORE: "1"
   MGOS_HAVE_DHT: "1"
   MGOS_HAVE_FREERTOS: "1"
-  MGOS_HAVE_LWIP: "1"
   MGOS_HAVE_MBEDTLS: "1"
   MGOS_HAVE_MONGOOSE: "1"
   MGOS_HAVE_RPC_COMMON: "1"
@@ -649,314 +615,278 @@ cdefs:
   MGOS_WIFI_ENABLE_AP_STA: "1"
 tags:
 - c
-libs_version: latest
-modules_version: latest
-mongoose_os_version: latest
+libs_version: 2.19.1
+modules_version: 2.19.1
+mongoose_os_version: 2.19.1
 manifest_version: "2017-09-29"
 libs_handled:
 - lib:
-    name: adc
+    origin: https://github.com/mongoose-os-libs/adc
     location: https://github.com/mongoose-os-libs/adc
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/adc
+    name: adc
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/adc
   init_deps:
   - core
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/adc/src/esp32/esp32_adc.c
-  version: latest
-  user_version: 1.0.0
-  repo_version: 80bd7797e66c9c9568ce11cdc9b639d28c6ae831
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/adc/src/esp32/esp32_adc.c
+  version: 1.0.0
 - lib:
-    name: freertos
+    origin: https://github.com/mongoose-os-libs/freertos
     location: https://github.com/mongoose-os-libs/freertos
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos
+    name: freertos
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/src/mgos_freertos.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/freertos/src/mgos_freertos_core_dump.c
-  version: latest
-  user_version: 10.2.0
-  repo_version: f4b5ba5336f2f0fe3b183527790cf82e0644364e
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/src/mgos_freertos.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/freertos/src/mgos_freertos_core_dump.c
+  version: 10.2.0
 - lib:
-    name: mbedtls
+    origin: https://github.com/mongoose-os-libs/mbedtls
     location: https://github.com/mongoose-os-libs/mbedtls
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls
+    name: mbedtls
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/mgos_mbedtls.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/esp32/esp32_aes.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mbedtls/src/esp32/esp32_bignum.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aes.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aes_atca.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aesni.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/arc4.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/aria.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/asn1parse.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/asn1write.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/base64.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/bignum.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/blowfish.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/camellia.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ccm.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/certs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/chacha20.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/chachapoly.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cipher.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cipher_wrap.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/cmac.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ctr_drbg.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/debug.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/des.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/dhm.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecdh.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecdsa.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecjpake.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp_atca.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ecp_curves.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/entropy.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/entropy_poll.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/error.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/gcm.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/havege.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/hkdf.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/hmac_drbg.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md2.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md4.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md5.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/md_wrap.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/memory_buffer_alloc.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/net_sockets.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/nist_kw.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/oid.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/padlock.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pem.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pk.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pk_wrap.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs11.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs12.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkcs5.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkparse.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/pkwrite.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/platform.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/platform_util.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/poly1305.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ripemd160.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/rsa.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/rsa_internal.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha1.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha256.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/sha512.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cache.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_ciphersuites.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cli.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_cookie.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_srv.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_ticket.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/ssl_tls.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/threading.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/timing.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/version.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/version_features.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_create.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_crl.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_crt.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509_csr.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509write_crt.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/x509write_csr.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/modules/mbedtls/library/xtea.c
-  version: latest
-  user_version: 2.16.11-cesanta1
-  repo_version: 286b31adcd885d4d0f6e6db82efe1c0928ae1173
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/mgos_mbedtls.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/esp32/esp32_aes.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mbedtls/src/esp32/esp32_bignum.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aes.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aes_atca.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aesni.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/arc4.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/aria.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/asn1parse.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/asn1write.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/base64.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/bignum.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/blowfish.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/camellia.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ccm.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/certs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/chacha20.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/chachapoly.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cipher.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cipher_wrap.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/cmac.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ctr_drbg.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/debug.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/des.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/dhm.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecdh.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecdsa.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecjpake.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp_atca.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ecp_curves.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/entropy.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/entropy_poll.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/error.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/gcm.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/havege.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/hkdf.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/hmac_drbg.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md2.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md4.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md5.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/md_wrap.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/memory_buffer_alloc.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/net_sockets.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/nist_kw.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/oid.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/padlock.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pem.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pk.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pk_wrap.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs11.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs12.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkcs5.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkparse.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/pkwrite.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/platform.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/platform_util.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/poly1305.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ripemd160.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/rsa.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/rsa_internal.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha1.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha256.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/sha512.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cache.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_ciphersuites.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cli.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_cookie.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_srv.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_ticket.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/ssl_tls.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/threading.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/timing.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/version.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/version_features.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_create.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_crl.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_crt.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509_csr.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509write_crt.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/x509write_csr.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/modules/mbedtls/library/xtea.c
+  version: 2.16.6-cesanta1
 - lib:
-    name: vfs-common
+    origin: https://github.com/mongoose-os-libs/vfs-common
     location: https://github.com/mongoose-os-libs/vfs-common
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common
+    name: vfs-common
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs_dev.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/mgos_vfs_internal.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_fs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_fs_crypt.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-common/src/esp32/esp32_vfs_dev_partition.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 9ac6a62cdf84e39f0246658d9d4c07f66516b4e4
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs_dev.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/mgos_vfs_internal.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_fs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_fs_crypt.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-common/src/esp32/esp32_vfs_dev_partition.c
+  version: "1.0"
 - lib:
-    name: mongoose
+    origin: https://github.com/mongoose-os-libs/mongoose
     location: https://github.com/mongoose-os-libs/mongoose
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/mongoose
-  init_deps:
-  - lwip
-  binary_libs:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/build/objs/libmongoose-esp32-latest.a
-  version: latest
-  user_version: "6.18"
-  repo_version: 24f3c520fdfd5d7c33ff2734d4be42aab75107e9
+    name: mongoose
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/mongoose
+  version: "6.18"
 - lib:
-    name: vfs-fs-lfs
+    origin: https://github.com/mongoose-os-libs/vfs-fs-lfs
     location: https://github.com/mongoose-os-libs/vfs-fs-lfs
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs
+    name: vfs-fs-lfs
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs
   init_deps:
   - vfs-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/src/mgos_vfs_lfs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs/lfs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs/lfs_util.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs1/lfs1.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-lfs/littlefs1/lfs1_util.c
-  version: latest
-  user_version: 2.4.0
-  repo_version: b611462e03d431f9541f50763b3153552db81861
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/src/mgos_vfs_lfs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs/lfs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs/lfs_util.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs1/lfs1.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-lfs/littlefs1/lfs1_util.c
+  version: 2.2.0
 - lib:
-    name: vfs-fs-spiffs
+    origin: https://github.com/mongoose-os-libs/vfs-fs-spiffs
     location: https://github.com/mongoose-os-libs/vfs-fs-spiffs
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs
+    name: vfs-fs-spiffs
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs
   init_deps:
   - vfs-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_check.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 0c1d9d07a4bf900f08ca4a250e29e7f5931301c5
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_check.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
+  version: "1.0"
 - lib:
-    name: core
+    origin: https://github.com/mongoose-os-libs/core
     location: https://github.com/mongoose-os-libs/core
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/core
+    name: core
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/core
   init_deps:
   - freertos
-  - lwip
   - mongoose
   - vfs-common
   - vfs-fs-lfs
   - vfs-fs-spiffs
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/core/src/mgos_core.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 9cbb8437919696a4a8779ebb4d0cd78d99890ac6
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/core/src/mgos_core.c
+  version: "1.0"
 - lib:
-    name: blynk
+    origin: https://github.com/mongoose-os-libs/blynk
     location: https://github.com/mongoose-os-libs/blynk
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/blynk
+    name: blynk
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/blynk
   init_deps:
   - core
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/blynk/src/mgos_blynk.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 71cfac7cbd66ed15ee7123fd3e9307bbc89d7457
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/blynk/src/mgos_blynk.c
+  version: "1.0"
 - lib:
-    name: ca-bundle
+    origin: https://github.com/mongoose-os-libs/ca-bundle
     location: https://github.com/mongoose-os-libs/ca-bundle
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/ca-bundle
+    name: ca-bundle
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/ca-bundle
   init_deps:
   - core
-  version: latest
-  user_version: "1.0"
-  repo_version: 82ddde1a7e95d316f0ef6a43ecfc265b0fbdaf4c
+  version: "1.0"
 - lib:
-    name: dht
+    origin: https://github.com/mongoose-os-libs/dht
     location: https://github.com/mongoose-os-libs/dht
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/dht
+    name: dht
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/dht
   init_deps:
   - core
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/dht/src/mgos_dht.c
-  version: latest
-  user_version: "1.0"
-  repo_version: ffc9eba98f9f379737f054a812126f02ac0a71a2
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/dht/src/mgos_dht.c
+  version: "1.0"
 - lib:
-    name: rpc-common
+    origin: https://github.com/mongoose-os-libs/rpc-common
     location: https://github.com/mongoose-os-libs/rpc-common
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common
+    name: rpc-common
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common
   init_deps:
   - core
   - mongoose
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc_channel.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mg_rpc_channel_http.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-common/src/mgos_rpc.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 9f25f5900c1ac39eaa79e5e30c679de502eb1953
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc_channel.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mg_rpc_channel_http.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-common/src/mgos_rpc.c
+  version: "1.0"
 - lib:
-    name: rpc-service-config
+    origin: https://github.com/mongoose-os-libs/rpc-service-config
     location: https://github.com/mongoose-os-libs/rpc-service-config
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-config
+    name: rpc-service-config
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-config
   init_deps:
   - core
   - rpc-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-config/src/mgos_service_config.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 5d2c7836479ae0e9fafa74dad102cb277b85497d
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-config/src/mgos_service_config.c
+  version: "1.0"
 - lib:
-    name: rpc-service-fs
+    origin: https://github.com/mongoose-os-libs/rpc-service-fs
     location: https://github.com/mongoose-os-libs/rpc-service-fs
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-fs
+    name: rpc-service-fs
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-fs
   init_deps:
   - core
   - rpc-common
   - vfs-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-service-fs/src/mgos_service_fs.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 39437663b14759671a37e9670a46c65e5519c369
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-service-fs/src/mgos_service_fs.c
+  version: "1.0"
 - lib:
-    name: rpc-uart
+    origin: https://github.com/mongoose-os-libs/rpc-uart
     location: https://github.com/mongoose-os-libs/rpc-uart
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-uart
+    name: rpc-uart
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-uart
   init_deps:
   - core
   - rpc-common
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/rpc-uart/src/mgos_rpc_channel_uart.c
-  version: latest
-  user_version: "1.0"
-  repo_version: 691aa994fe778248a2ffb6a6d1e763120a967cd7
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/rpc-uart/src/mgos_rpc_channel_uart.c
+  version: "1.0"
 - lib:
-    name: lwip
-    location: https://github.com/mongoose-os-libs/lwip
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/lwip
-  init_deps:
-  - freertos
-  sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/lwip/src/mgos_lwip.c
-  version: latest
-  user_version: 2.1.2
-  repo_version: 417e07ea1b5d37f59428caee93b6730798090460
-- lib:
-    name: wifi
+    origin: https://github.com/mongoose-os-libs/wifi
     location: https://github.com/mongoose-os-libs/wifi
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi
+    name: wifi
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi
   init_deps:
   - core
-  - lwip
   sources:
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mgos_wifi.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mgos_wifi_sta.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/mjs_wifi.c
-  - /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/wifi/src/esp32/esp32_wifi.c
-  version: latest
-  user_version: "1.0"
-  repo_version: ce1e294c5f07b011c9a554e2d5638ae14f017a76
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/mgos_wifi.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/mjs_wifi.c
+  - /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/wifi/src/esp32/esp32_wifi.c
+  version: "1.0"
 - lib:
-    name: zz_boards
+    origin: https://github.com/mongoose-os-libs/boards
     location: https://github.com/mongoose-os-libs/boards
-  path: /data/fwbuild-volumes/latest/apps/core/esp32/build_contexts/build_ctx_968427701/deps/boards
-  version: latest
-  repo_version: a317361ee008969b8a96a2e7fa7eb243442dcb93
+    name: zz_boards
+  path: /data/fwbuild-volumes/2.19.1/apps/core/esp32/build_contexts/build_ctx_417510169/deps/boards
 init_deps:
 - freertos
-- lwip
 - mongoose
 - vfs-common
 - vfs-fs-lfs
