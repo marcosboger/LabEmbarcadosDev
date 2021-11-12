@@ -38,11 +38,15 @@ int s_read_temperature_virtual_pin = 1;
 int s_write_water_virtual_pin = 2;
 int watering;
 struct mgos_config_wifi_sta cfg;
-//int wakeup_time_sec = 10; 
+int wakeup_time_sec = 15; 
+struct mgos_dht *dht = NULL;
+
+RTC_DATA_ATTR static int boot_count = 0;
+int messages_sent = 0;
 
 
 
-static void timer_cb(void *dht) {
+/*static void timer_cb(void *dht) {
   //int voltage = mgos_adc_read_voltage(pinAdc);
   //LOG(LL_INFO, ("Sensor voltage read: %d", voltage));
   if(!watering){
@@ -51,18 +55,26 @@ static void timer_cb(void *dht) {
     LOG(LL_INFO, ("Temperature: %lf", temperature));
     LOG(LL_INFO, ("Humidity: %lf", humidity));
   } 
-}
+}*/
 
 void default_blynk_handler(struct mg_connection *c, const char *cmd,
                                   int pin, int val, int id, void *user_data) {
   if (strcmp(cmd, "vr") == 0) {
     if (pin == s_read_humidity_virtual_pin) {
-      if(!watering)
+      if(!watering){
+        humidity = mgos_dht_get_humidity(dht);
         blynk_virtual_write(c, s_read_humidity_virtual_pin, humidity, id);
+        LOG(LL_INFO, ("Humidity: %lf", humidity));
+        messages_sent++;
+      }
     }
     if (pin == s_read_temperature_virtual_pin) {
-      if(!watering)
+      if(!watering){
+        temperature = mgos_dht_get_temp(dht);
         blynk_virtual_write(c, s_read_temperature_virtual_pin, temperature, id);
+        LOG(LL_INFO, ("Temperature: %lf", temperature));
+        messages_sent++;
+      }
     }
   } 
   if (strcmp(cmd, "vw") == 0) {
@@ -71,10 +83,16 @@ void default_blynk_handler(struct mg_connection *c, const char *cmd,
       watering = !watering;
     }
   }
+  if(messages_sent > 50){
+    LOG(LL_INFO, ("Entering Deep Sleep!"));
+    esp_deep_sleep_start();
+  }
   (void) user_data;
 }
 
 enum mgos_app_init_result mgos_app_init(void) {
+  boot_count++;
+  messages_sent = 0;
   const char *blynkAuth = BLYNK_AUTH_TOKEN;
   mgos_sys_config_set_blynk_auth(blynkAuth);
   cfg.enable = 1;
@@ -86,11 +104,13 @@ enum mgos_app_init_result mgos_app_init(void) {
   bool gpio = mgos_gpio_setup_output(pinGpio, 1);
   bool water = mgos_gpio_setup_output(pinWater, 0);
   watering = 0;
-  struct mgos_dht *dht = mgos_dht_create(pinDht, DHT11);
-  //esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
-  //esp_deep_sleep_start();
-  if(gpio && water && wifi)
-    mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
+  dht = mgos_dht_create(pinDht, DHT11);
+  if(boot_count % 4 == 0)
+    LOG(LL_INFO, ("Watering!"));
+  if(gpio && water && wifi){
+    esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
+    //mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
+  }
   else 
     LOG(LL_INFO,
       ("Error in Setting everything up!"));
