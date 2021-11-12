@@ -21,7 +21,6 @@
 #include "mgos_dht.h"
 #include "mgos_blynk.h"
 #include "mgos_wifi.h"
-#include "esp_sleep.h"
 
 #define BLYNK_AUTH_TOKEN "nma24wK-jF4Q-FIF5E0hqGh3SzhM2oUN";
 #define NETWORK_NAME "Luke s House";
@@ -36,9 +35,11 @@ float temperature = 0;
 int s_read_humidity_virtual_pin = 0;
 int s_read_temperature_virtual_pin = 1;
 int s_write_water_virtual_pin = 2;
+int s_write_qty_virtual_pin = 3;
 int watering;
+int watering_per_day = 0;
+int cycles_gone = 0; 
 struct mgos_config_wifi_sta cfg;
-//int wakeup_time_sec = 10; 
 
 
 
@@ -50,7 +51,27 @@ static void timer_cb(void *dht) {
     temperature = mgos_dht_get_temp(dht);
     LOG(LL_INFO, ("Temperature: %lf", temperature));
     LOG(LL_INFO, ("Humidity: %lf", humidity));
+    LOG(LL_INFO, ("Watering per Day: %d", watering_per_day));
   } 
+}
+
+static void water_cb() {
+  cycles_gone++;
+  LOG(LL_INFO, ("cycles_gone: %d", cycles_gone));
+  LOG(LL_INFO, ("watering_per_day: %d", watering_per_day));
+  int hour_water;
+  if(watering_per_day)
+    hour_water = 24/watering_per_day;
+  else  
+    return;
+  if(cycles_gone >= hour_water){
+    cycles_gone = 0;
+    //mgos_gpio_toggle(pinWater);
+    LOG(LL_INFO, ("Watering!"));
+    vTaskDelay(4000 / portTICK_PERIOD_MS);
+    //mgos_gpio_toggle(pinWater);
+    LOG(LL_INFO, ("Stopped Watering!"));
+  }
 }
 
 void default_blynk_handler(struct mg_connection *c, const char *cmd,
@@ -70,6 +91,9 @@ void default_blynk_handler(struct mg_connection *c, const char *cmd,
       mgos_gpio_toggle(pinWater);
       watering = !watering;
     }
+    if (pin == s_write_qty_virtual_pin) {
+      watering_per_day = val;
+    }
   }
   (void) user_data;
 }
@@ -87,10 +111,9 @@ enum mgos_app_init_result mgos_app_init(void) {
   bool water = mgos_gpio_setup_output(pinWater, 0);
   watering = 0;
   struct mgos_dht *dht = mgos_dht_create(pinDht, DHT11);
-  //esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
-  //esp_deep_sleep_start();
   if(gpio && water && wifi)
-    mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
+    //mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
+    mgos_set_timer(10000 /* ms */, MGOS_TIMER_REPEAT, water_cb, dht);
   else 
     LOG(LL_INFO,
       ("Error in Setting everything up!"));
