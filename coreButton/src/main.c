@@ -22,16 +22,22 @@
 #include "mgos_blynk.h"
 #include "mgos_wifi.h"
 
+#include "http_get.c"
+
+
 #define BLYNK_AUTH_TOKEN "nma24wK-jF4Q-FIF5E0hqGh3SzhM2oUN";
 #define NETWORK_NAME "Luke s House";
 #define NETWORK_PASSWORD "123abc456";
+#define API_KEY "ZKVAX1H28KORXNXB";
 
-//int pinAdc = 34;
+int pinAdc = 34;
 int pinGpio = 13;
 int pinWater = 14;
 int pinDht = 26;
+int counter = 0;
 float humidity = 0;
 float temperature = 0;
+int voltage = 0;
 int s_read_humidity_virtual_pin = 0;
 int s_read_temperature_virtual_pin = 1;
 int s_write_water_virtual_pin = 2;
@@ -44,7 +50,7 @@ struct mgos_config_wifi_sta cfg;
 
 
 static void timer_cb(void *dht) {
-  //int voltage = mgos_adc_read_voltage(pinAdc);
+  voltage = mgos_adc_read_voltage(pinAdc);
   //LOG(LL_INFO, ("Sensor voltage read: %d", voltage));
   if(!watering){
     humidity = mgos_dht_get_humidity(dht);
@@ -55,7 +61,19 @@ static void timer_cb(void *dht) {
   } 
 }
 
-static void water_cb() {
+static void water_cb(void *dht) {
+  voltage = mgos_adc_read_voltage(pinAdc);
+  humidity = mgos_dht_get_humidity(dht);
+  temperature = mgos_dht_get_temp(dht);
+  if(counter == 1)
+    http_get_task(1, temperature);
+  if(counter == 2)
+    http_get_task(2, humidity);
+  if(counter == 3){
+    http_get_task(3, voltage);
+    counter = 0;
+  } 
+  counter++;
   cycles_gone++;
   LOG(LL_INFO, ("cycles_gone: %d", cycles_gone));
   LOG(LL_INFO, ("watering_per_day: %d", watering_per_day));
@@ -98,6 +116,10 @@ void default_blynk_handler(struct mg_connection *c, const char *cmd,
   (void) user_data;
 }
 
+void _http_event_handle(){
+  return;
+}
+
 enum mgos_app_init_result mgos_app_init(void) {
   const char *blynkAuth = BLYNK_AUTH_TOKEN;
   mgos_sys_config_set_blynk_auth(blynkAuth);
@@ -105,15 +127,16 @@ enum mgos_app_init_result mgos_app_init(void) {
   cfg.ssid = NETWORK_NAME;
   cfg.pass = NETWORK_PASSWORD;
   bool wifi = mgos_wifi_setup_sta(&cfg);
+
   blynk_set_handler(default_blynk_handler, NULL);
-  //bool adc = mgos_adc_enable(pinAdc);
+  bool adc = mgos_adc_enable(pinAdc);
   bool gpio = mgos_gpio_setup_output(pinGpio, 1);
   bool water = mgos_gpio_setup_output(pinWater, 0);
   watering = 0;
   struct mgos_dht *dht = mgos_dht_create(pinDht, DHT11);
-  if(gpio && water && wifi)
+  if(gpio && water && wifi && adc)
     //mgos_set_timer(500 /* ms */, MGOS_TIMER_REPEAT, timer_cb, dht);
-    mgos_set_timer(10000 /* ms */, MGOS_TIMER_REPEAT, water_cb, dht);
+    mgos_set_timer(20000 /* ms */, MGOS_TIMER_REPEAT, water_cb, dht);
   else 
     LOG(LL_INFO,
       ("Error in Setting everything up!"));
