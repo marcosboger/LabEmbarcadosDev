@@ -7,12 +7,12 @@
 #include "lwip/netdb.h"
 #include "lwip/dns.h"
 
-static void http_get_task(int field, float value)
+static void http_get_task(int field, float value, int field2, float value2, int field3, float value3)
 {
     char *web_server = "api.thingspeak.com";
     char *web_port = "80";
     char *web_path;
-    asprintf(&web_path, "/update?api_key=ZKVAX1H28KORXNXB&field%d=%lf", field, value);
+    asprintf(&web_path, "/update?api_key=ZKVAX1H28KORXNXB&field%d=%lf&field%d=%lf&field%d=%lf", field, value, field2, value2, field3, value3);
 
     char *REQUEST;
     asprintf(&REQUEST, "GET %s  HTTP/1.0\r\nHost: %s:%s\r\nUser-Agent: esp-idf/1.0 esp32\r\n\r\n", web_path, web_server, web_port);
